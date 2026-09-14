@@ -69,16 +69,14 @@ st.set_page_config(
     page_title="Invoice & Vision Parser",
     page_icon="🧾",
     layout="wide",
-    # "expanded", and not "auto" -- tried and reverted. The documented
-    # behaviour of "auto" is to expand on a desktop and collapse on a phone,
-    # which is exactly what is wanted. Measured against this deployment it
-    # collapsed at 1440px on a desktop user agent too, with the sidebar not
-    # rendered at all, which hides the sample selector that drives the demo.
-    # The cost of "expanded" is a 336px sidebar over a 375px phone, one tap
-    # to dismiss. That is the better trade for a link opened mostly on a
-    # laptop. Anyone revisiting this: verify on the deployed app, not
-    # locally -- Community Cloud renders inside an iframe.
-    initial_sidebar_state="expanded",
+    # "auto", not "expanded": Streamlit expands the sidebar on a desktop and
+    # collapses it on a narrow viewport. Forcing it open put a 336px sidebar
+    # over a 375px phone, so a visitor arriving from a link on their phone
+    # saw the controls instead of the verdict the demo exists to show.
+    # Verify any change here against the DEPLOYED app and by screenshot:
+    # Community Cloud renders inside an iframe, and querying that iframe for
+    # the sidebar returns false negatives under viewport emulation.
+    initial_sidebar_state="auto",
 )
 
 # Palette matches .streamlit/config.toml, which pins the light theme so these
