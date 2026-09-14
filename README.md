@@ -6,11 +6,12 @@ and a formatted Excel workbook in one click.
 
 Built for logistics, wholesale, retail, e-commerce and corporate-travel documents.
 
-**Status: V1 · source public · hosted demo next.** Deploying to Streamlit
-Community Cloud is the one remaining step; the dependency pre-flight against
-Cloud's Python 3.14 is done and every pin ships a prebuilt wheel, so the build
-needs no compiler and no system packages. In the meantime it runs locally in two
-commands and needs no API key — see [Quick start](#quick-start).
+**▶ [Open the live demo](https://invoice-vision-parser-uezswbeps38zrocbeej9hf.streamlit.app/)** — three bundled
+invoices, one click, no sign-up and no API key. The green verdict on first paint
+is Python's own arithmetic, not the model's word for it; pick the wholesale
+invoice to watch the audit catch a real error.
+
+Runs locally in two commands too — see [Quick start](#quick-start).
 
 ```
 ┌─────────────────────────┐   ┌──────────────────────────────────────┐
@@ -252,7 +253,7 @@ python -m pytest tests/ -q          # 134 passed
 
 ## Deploying to Streamlit Community Cloud
 
-Point it at `app.py`. No `packages.txt` is needed — every dependency ships
+Deployed from `main` at the link above. Point it at `app.py`. No `packages.txt` is needed — every dependency ships
 prebuilt wheels. Then set the caps in **Settings → Secrets** (a `.env` file is
 not deployed):
 
