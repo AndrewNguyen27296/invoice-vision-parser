@@ -69,7 +69,11 @@ st.set_page_config(
     page_title="Invoice & Vision Parser",
     page_icon="🧾",
     layout="wide",
-    initial_sidebar_state="expanded",
+    # "auto", not "expanded": Streamlit keeps the sidebar open on a desktop
+    # and collapses it on a narrow viewport. Forcing it open put a 336px
+    # sidebar over a 375px phone screen, so the first thing a visitor saw
+    # was the controls rather than the verdict the demo exists to show.
+    initial_sidebar_state="auto",
 )
 
 # Palette matches .streamlit/config.toml, which pins the light theme so these

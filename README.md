@@ -270,6 +270,11 @@ PARSER_MAX_UPLOAD_MB = "8"
 With `PARSER_PROVIDER = "demo"` the deployment holds no API key at all and cannot
 spend anything.
 
+One caveat on the upload cap: `.streamlit/config.toml` sets `maxUploadSize = 15`,
+which is the door the browser enforces. `PARSER_MAX_UPLOAD_MB` can only tighten
+that, never widen it — a file between the two limits is accepted by the browser
+and then refused by the guard with an explanation. Raise both to go above 15 MB.
+
 ---
 
 ## Scope and limitations
