@@ -1,0 +1,5 @@
+# Local development only. NOT installed on Streamlit Community Cloud.
+-r requirements.txt
+
+pytest==9.1.1             # 111 tests
+reportlab==4.4.10         # regenerates the sample invoices (scripts/make_samples.py)

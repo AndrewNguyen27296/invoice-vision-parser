@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------------------
+# Streamlit configuration, committed so the deployed app looks identical to
+# local and to every reviewer's screen.
+#
+# The theme is pinned to light on purpose: the audit verdict is communicated by
+# colour (green verified / red failed / amber inconclusive), and those fills are
+# chosen for a light ground. Letting the viewer's OS flip the app to dark would
+# leave dark text on dark panels at exactly the moment the badge matters most.
+# ---------------------------------------------------------------------------
+
+[theme]
+base = "light"
+primaryColor = "#1B3A5C"            # the navy from the sample invoice letterhead
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F7FA"
+textColor = "#1C2833"
+font = "sans serif"
+
+[server]
+maxUploadSize = 15                  # mirrors PARSER_MAX_UPLOAD_MB: reject at the door
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"             # no developer menu on a client-facing demo
+showErrorDetails = false            # never show a prospect a Python traceback

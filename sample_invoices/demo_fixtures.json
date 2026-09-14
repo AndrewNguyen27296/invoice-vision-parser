@@ -1,0 +1,164 @@
+{
+  "_comment": "Curated CORRECT answers for the three bundled sample invoices, keyed by SHA-256 of the file bytes. Used by the 'demo' provider so the public demo can run end to end with no API key -- and, critically, so a key-less demo never shows CONFIDENTLY WRONG data. The UI labels this route as a canned response; it is a demo fixture, not an extraction.",
+  "fixtures": {
+    "ba555b5d993038b486bcb6e045811569c35a005e881e18ea446d75d89148c179": {
+      "_file": "1_clean_freight.pdf",
+      "vendor_name": "NORDFRAKT LOGISTIK AB",
+      "vendor_tax_id": "SE556677889901",
+      "invoice_no": "NF-2026-04417",
+      "invoice_date": "2026-08-21",
+      "due_date": "2026-09-20",
+      "currency": "SEK",
+      "line_items": [
+        {
+          "description": "Road freight Gothenburg -> Malmo, 4 pallets",
+          "quantity": 4.0,
+          "unit_price": 185.0,
+          "line_total": 740.0
+        },
+        {
+          "description": "Fuel surcharge 12%",
+          "quantity": 1.0,
+          "unit_price": 88.8,
+          "line_total": 88.8
+        },
+        {
+          "description": "Waiting time, 1.5 h",
+          "quantity": 1.5,
+          "unit_price": 420.0,
+          "line_total": 630.0
+        },
+        {
+          "description": "Pallet exchange fee",
+          "quantity": 4.0,
+          "unit_price": 22.8,
+          "line_total": 91.2
+        }
+      ],
+      "subtotal": 1550.0,
+      "tax_rate": 25.0,
+      "tax_amount": 387.5,
+      "total_amount": 1937.5
+    },
+    "695b8b7349e12de9d5d08409143f3b06845720f20538d526da517e30bcf661ea": {
+      "_file": "2_messy_wholesale.pdf",
+      "vendor_name": "SODRA PARTIHANDEL & GROSSIST HB",
+      "vendor_tax_id": "SE969876543201",
+      "invoice_no": "2026-1183-B",
+      "invoice_date": "2026-09-04",
+      "due_date": "2026-10-04",
+      "currency": "SEK",
+      "line_items": [
+        {
+          "description": "Kaffebonor Arabica 1kg / Coffee beans",
+          "quantity": 24.0,
+          "unit_price": 89.5,
+          "line_total": 2148.0
+        },
+        {
+          "description": "Papperspase 250-pack",
+          "quantity": 12.0,
+          "unit_price": 145.0,
+          "line_total": 1740.0
+        },
+        {
+          "description": "Servetter vit 33cm, kartong",
+          "quantity": 8.0,
+          "unit_price": 212.75,
+          "line_total": 1702.0
+        },
+        {
+          "description": "Engangsmugg 40cl, 1000 st",
+          "quantity": 6.0,
+          "unit_price": 398.0,
+          "line_total": 2388.0
+        },
+        {
+          "description": "Ratt: Rengoringsmedel 5L",
+          "quantity": 4.0,
+          "unit_price": 176.5,
+          "line_total": 706.0
+        },
+        {
+          "description": "Handskar nitril M, 100-pack",
+          "quantity": 15.0,
+          "unit_price": 94.25,
+          "line_total": 1413.75
+        },
+        {
+          "description": "Sopsackar 125L, rulle",
+          "quantity": 20.0,
+          "unit_price": 67.8,
+          "line_total": 1356.0
+        },
+        {
+          "description": "Diskmedel koncentrat 5L",
+          "quantity": 5.0,
+          "unit_price": 289.0,
+          "line_total": 1445.0
+        },
+        {
+          "description": "Toapapper 2-lagers, 36 rullar",
+          "quantity": 9.0,
+          "unit_price": 178.9,
+          "line_total": 1610.1
+        },
+        {
+          "description": "Frakt / Freight",
+          "quantity": 1.0,
+          "unit_price": 450.0,
+          "line_total": 450.0
+        },
+        {
+          "description": "Miljoavgift / Environmental fee",
+          "quantity": 1.0,
+          "unit_price": 35.0,
+          "line_total": 35.0
+        }
+      ],
+      "subtotal": 14993.85,
+      "tax_rate": 25.0,
+      "tax_amount": 3748.46,
+      "total_amount": 18745.31
+    },
+    "c0c200f1539fbadd099644faa2dbce77481be4ed162efd49d15b60484d375a57": {
+      "_file": "3_skewed_scan.pdf",
+      "vendor_name": "Atlas Corporate Travel Ltd",
+      "vendor_tax_id": "GB 412 8876 22",
+      "invoice_no": "ATC-88213",
+      "invoice_date": "2026-08-12",
+      "due_date": null,
+      "currency": "GBP",
+      "line_items": [
+        {
+          "description": "Return flight LHR-ARN, economy",
+          "quantity": 2,
+          "unit_price": 214.0,
+          "line_total": 428.0
+        },
+        {
+          "description": "Hotel Stockholm, 3 nights",
+          "quantity": 3,
+          "unit_price": 156.5,
+          "line_total": 469.5
+        },
+        {
+          "description": "Airport transfer",
+          "quantity": 4,
+          "unit_price": 38.0,
+          "line_total": 152.0
+        },
+        {
+          "description": "Booking service fee",
+          "quantity": 1,
+          "unit_price": 45.0,
+          "line_total": 45.0
+        }
+      ],
+      "subtotal": 1094.5,
+      "tax_rate": 20,
+      "tax_amount": 218.9,
+      "total_amount": 1313.4
+    }
+  }
+}

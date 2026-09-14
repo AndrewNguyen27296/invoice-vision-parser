@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------------------
+# Runtime dependencies for Streamlit Community Cloud.
+#
+# LEAN BY DESIGN. Every package here is imported by the running app. All are
+# pure-Python or ship prebuilt wheels, so the deploy needs NO apt packages and
+# no packages.txt. Dev-only tooling lives in requirements-dev.txt and is not
+# installed on the host.
+#
+# The app runs end to end with NO API key: digital PDFs are read from their own
+# text layer, and the bundled scan is served from curated demo fixtures.
+# ---------------------------------------------------------------------------
+
+streamlit==1.63.0         # UI. Pulls pandas, pillow, numpy, pyarrow itself.
+pydantic==2.13.3          # Strict schema + the math-audit contract
+pypdfium2==5.7.1          # PDF render + text layer. Prebuilt wheel, no system libs.
+Pillow==12.2.0            # Image downscaling before encoding
+pandas==3.0.2             # st.data_editor frame (also a streamlit dependency)
+openpyxl==3.1.5           # Formatted .xlsx export
+python-dotenv==1.2.2      # Local .env; harmless on Cloud where secrets are env
+
+# ---------------------------------------------------------------------------
+# OPTIONAL vision backends, for documents with no text layer.
+# Deliberately commented out: the public demo does not need either, and each
+# one lengthens the Cloud build. Uncomment ONE if you set PARSER_PROVIDER to it.
+#
+#   anthropic==0.73.0     # PARSER_PROVIDER=anthropic  (paid, best accuracy)
+#   google-genai==1.46.0  # PARSER_PROVIDER=gemini     (free tier available)
+# ---------------------------------------------------------------------------

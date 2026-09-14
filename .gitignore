@@ -1,0 +1,26 @@
+.env
+.streamlit/secrets.toml
+.cache/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+*.xlsx
+!sample_invoices/*.xlsx
+
+# Real client/vendor documents and their ground truth. NEVER COMMIT THESE.
+# The folder's own README is kept so the workflow is documented in the repo.
+real_invoices/*
+!real_invoices/README.md
+
+# Internal working notes — strategy, commercial positioning, cost/spend detail
+# and the engineering audit trail. Useful to keep locally, not for a public
+# repo that prospective clients browse.
+_internal/
+RUNBOOK.md
+
+# The employer and client names the public-repo guard greps for. Kept out of
+# the tree so the guard does not publish the very words it checks for; see
+# tests/test_deploy_readiness.py::_private_terms.
+tests/.private_terms
